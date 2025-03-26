@@ -1,0 +1,84 @@
+// Đặt các biến SCSS từ các biến CSS của Elementor
+$color_primary: var(--e-global-color-primary);
+$color_secondary: var(--e-global-color-secondary);
+$color_text: var(--e-global-color-text);
+$color_accent: var(--e-global-color-accent);
+
+$body: #3E3E3E;
+$primary : #0052FF; //1
+$secondary : #FFAF37; //2
+$success : #15294B; //3
+$info : #002573; //4
+
+body {
+    line-height: 1.5 !important;
+}
+
+.elementor-widget-text-editor .elementor-widget-container>*:last-child {
+    margin: 0px !important;
+}
+
+.elementor-button-link {
+
+    .elementor-button-icon,
+    .elementor-button-text {
+        display: flex !important;
+    }
+
+    .elementor-button-icon svg {
+        width: auto;
+    }
+
+    .elementor-button-content-wrapper {
+        align-items: center !important;
+    }
+}
+
+.elementor-widget-icon-list {
+    .elementor-icon-list-icon {
+        svg {
+            margin: 0px !important;
+        }
+    }
+
+    .elementor-icon-list-text {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+}
+
+// ---------- line ------------
+@mixin line-clamp($lines) {
+    -webkit-line-clamp: $lines;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.line-1 {
+    @include line-clamp(1);
+}
+
+.line-2 {
+    @include line-clamp(2);
+}
+
+.line-3 {
+    @include line-clamp(3);
+}
+
+.video {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    padding-bottom: 56.25%;
+
+    iframe,
+    video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
