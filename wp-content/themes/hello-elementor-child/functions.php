@@ -27,12 +27,6 @@ if (!defined('_S_VERSION')) {
 // define('DISALLOW_FILE_EDIT', true); // Tắt trình chỉnh sửa file trong Dashboard
 // add_filter('auto_update_plugin', '__return_false'); // Ngăn cập nhật tự động plugin
 
-function register_my_menus()
-{
-    register_nav_menu('menu-footer', __('Menu Footer'));
-}
-add_action('after_setup_theme', 'register_my_menus');
-
 /**
  * Enqueue scripts and styles.
  */
