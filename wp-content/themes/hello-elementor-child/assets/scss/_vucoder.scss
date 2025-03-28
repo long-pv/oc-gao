@@ -1,0 +1,35 @@
+.category {
+}
+
+.category__item {
+}
+
+.category__image-wrapper {
+	position: relative;
+	width: 100%;
+	height: 0px;
+	padding-bottom: 75%; /* Giữ tỷ lệ 4:3, chỉnh lại nếu cần */
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.category__image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.category__image:hover {
+	transform: scale(1.05);
+}
+
+.category__name {
+	font-size: 18px;
+	font-weight: bold;
+	color: #aaa;
+	margin-top: 10px;
+	text-transform: uppercase;
+	text-align: center;
+}
