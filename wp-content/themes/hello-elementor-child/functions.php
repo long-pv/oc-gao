@@ -11,6 +11,12 @@ if (!defined('_S_VERSION')) {
  */
 // define('LANG', function_exists('pll_current_language') ? pll_current_language('slug') : 'vi');
 
+/**
+ * Tăng dung lượng upload file
+ */
+define('WP_MEMORY_LIMIT', '512M');
+define('WP_MAX_MEMORY_LIMIT', '512M');
+
 // turn on auto update core wp
 // define('WP_AUTO_UPDATE_CORE', true); // Bật cập nhật tự động WordPress
 // define('AUTOMATIC_UPDATER_DISABLED', false); // Đảm bảo cập nhật tự động không bị tắt
@@ -261,7 +267,7 @@ add_action('init', 'disable_auto_update_if_enabled');
 
 function custom_upload_size_limit($bytes)
 {
-    $upload_limit = get_field('upload_size_limit', 'option') ?? 2;
+    $upload_limit = get_field('upload_size_limit', 'option') ?? 10;
     return $upload_limit * 1024 * 1024;
 }
 add_filter('upload_size_limit', 'custom_upload_size_limit');
