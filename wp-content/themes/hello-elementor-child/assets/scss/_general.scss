@@ -1,17 +1,10 @@
-// Đặt các biến SCSS từ các biến CSS của Elementor
-$color_primary: var(--e-global-color-primary);
-$color_secondary: var(--e-global-color-secondary);
-$color_text: var(--e-global-color-text);
-$color_accent: var(--e-global-color-accent);
-
-$body: #3E3E3E;
-$primary : #0052FF; //1
-$secondary : #FFAF37; //2
-$success : #15294B; //3
-$info : #002573; //4
-
 body {
-    line-height: 1.5 !important;
+    @media (max-width: 1024px) {
+        -webkit-touch-callout: none !important;
+        -khtml-user-select: none !important;
+        -ms-touch-action: pan-y !important;
+        touch-action: pan-y !important;
+    }
 }
 
 .elementor-widget-text-editor .elementor-widget-container>*:last-child {
@@ -47,6 +40,33 @@ body {
     }
 }
 
+.elementor-widget-icon-box {
+    .elementor-icon-box-title {
+        margin-top: 0px !important;
+    }
+}
+
+// -------------- Picture frame -------------
+.imgGroup {
+    display: block;
+    z-index: 5;
+    position: relative;
+    height: 0px;
+    padding-bottom: 70%;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100% !important;
+        height: 100% !important;
+        transform: scale(1);
+        object-fit: cover;
+        transition: all 0.3s;
+    }
+}
+
 // ---------- line ------------
 @mixin line-clamp($lines) {
     -webkit-line-clamp: $lines;
@@ -68,6 +88,7 @@ body {
     @include line-clamp(3);
 }
 
+// ---------- video ------------
 .video {
     position: relative;
     width: 100%;

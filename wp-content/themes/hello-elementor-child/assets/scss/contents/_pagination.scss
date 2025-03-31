@@ -1,0 +1,45 @@
+.pagination,
+.woocommerce-pagination {
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 24px !important;
+    margin-bottom: 0px !important;
+    gap: 8px !important;
+
+    .page-numbers {
+        padding: 0px;
+        width: 44px;
+        height: 44px;
+        font-weight: 400;
+        color: #354764 !important;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 4px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #B3B9C4;
+
+        &.current {
+            background: #0052FF;
+            color: #fff !important;
+            border: 1px solid #0052FF;
+        }
+
+        &.next,
+        &.prev {
+            padding: 0;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &.next {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3e%3cpath d='M10 17.5L14.5932 13.3838C15.1356 12.8977 15.1356 12.1023 14.5932 11.6162L10 7.5' stroke='%23C0C0C0' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+        }
+
+        &.prev {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3e%3cpath d='M15 17.5L10.4068 13.3838C9.86439 12.8977 9.86439 12.1023 10.4068 11.6161L15 7.49998' stroke='%23C0C0C0' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+        }
+    }
+}

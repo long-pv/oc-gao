@@ -1,5 +1,13 @@
 @import 'general';
-@import 'modal';
-@import 'editor';
-@import 'longpv';
-@import 'vucoder';
+
+// pages
+@import 'pages/single';
+
+// contents
+@import 'contents/modal';
+@import 'contents/editor';
+@import 'contents/pagination';
+@import 'contents/breadcrumbs';
+
+// widgets
+@import 'widgets/index';

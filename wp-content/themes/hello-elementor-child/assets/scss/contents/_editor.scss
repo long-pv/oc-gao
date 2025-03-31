@@ -1,7 +1,7 @@
 .editor {
     font-size: 14px;
     color: #3E3E3E;
-    text-align: justify !important;
+    // text-align: justify !important;
     font-weight: 400;
 
     h1,
@@ -10,20 +10,17 @@
     h4,
     h5,
     h6 {
-        font-weight: 500 !important;
-        color: #15294B !important;
+        font-weight: 600 !important;
         margin-top: 0px !important;
         margin-bottom: 12px !important;
     }
 
     h1 {
         font-size: 28px !important;
-        font-weight: 600 !important;
     }
 
     h2 {
         font-size: 24px !important;
-        font-weight: 600 !important;
     }
 
     h3 {
